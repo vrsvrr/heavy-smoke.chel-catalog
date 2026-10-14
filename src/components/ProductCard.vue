@@ -24,7 +24,7 @@
         </span>
 
         <RouterLink
-          class="button button--primary"
+          class="button product-card__detail button--primary"
           :to="{
             name: 'product-detail',
             params: { id: product.id },
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed } from "vue";
 
 const props = defineProps({
   product: {
@@ -47,12 +47,12 @@ const props = defineProps({
   },
 });
 
-defineEmits(['select']);
+defineEmits(["select"]);
 
 const formattedPrice = computed(() => {
-  return new Intl.NumberFormat('ru-RU', {
-    style: 'currency',
-    currency: 'RUB',
+  return new Intl.NumberFormat("ru-RU", {
+    style: "currency",
+    currency: "RUB",
     maximumFractionDigits: 0,
   }).format(props.product.price);
 });

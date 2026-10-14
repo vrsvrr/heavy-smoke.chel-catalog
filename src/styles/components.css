@@ -98,6 +98,14 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 500px) {
+  .product-card__detail {
+    padding: 5px;
+    min-height: auto;
+    font-size: 8px;
+  }
+}
 /* Страница товара */
 .product-detail {
   padding: 32px 0 60px;
